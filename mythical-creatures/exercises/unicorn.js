@@ -4,18 +4,18 @@ class Unicorn {
     if (color === undefined) {
     this.color = 'white';
   } else {
-    this.color = color
+    this.color = color;
   }
 }
   isWhite() {
    if (this.color === 'white') {
-    return true
+    return true;
    } else {
-    return false
+    return false;
    }
 }
   says(message) {
-    return `**;* ${message} *;**`
+    return `**;* ${message} *;**`;
   }
 
 }
