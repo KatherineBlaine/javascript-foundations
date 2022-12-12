@@ -3,16 +3,16 @@ class Dragon {
     this.name = dragonName
     this.rider = dragonRider
     this.hungry = true
-    this.eaten = []
+    this.eaten = 0;
     }
 greet() {
     return `Hi, ${this.rider}!`
 }
 
 eat() {
-    this.eaten.push('✅!')
+    this.eaten += 1
     console.log(this.eaten)
-    if (this.eaten.length < 3) {
+    if (this.eaten < 3) {
         this.hungry = true;
     } else {
         this.hungry = false;
