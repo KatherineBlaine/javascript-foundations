@@ -6,6 +6,3 @@ class Person {
 }
 
 module.exports = Person;
-
-// new Person('Robbie') -
-// { name: robbie, mood: frightened }
