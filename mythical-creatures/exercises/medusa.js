@@ -7,9 +7,18 @@ class Medusa {
         this.statues = []
     }
     gazeAtVictim(person) {
-        var newStatue = new Statue(person.name)
-        this.statues.push(newStatue)
+        if (this.statues.length < 3) {
+            this.statues.push(new Statue(person.name))
+        } else {
+            this.statues.push(new Statue (person.name))
+            var personAgain = new Person(this.statues[0].name)
+            this.statues.shift()
+            personAgain.mood = 'relieved'
+            return personAgain
+        }
+       
     }
+
 }
 
 module.exports = Medusa;
