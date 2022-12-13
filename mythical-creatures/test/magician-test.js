@@ -28,19 +28,19 @@ it('should be able to have an assistant', function() {
     assert.equal(magician2.assistant, false);
   });
 
-it.skip('', function() {
+it('should it should default to top hat as favorite accessory', function() {
     var magician = new Magician({ name: 'Scott' });
 
     assert.equal(magician.favoriteAccessory, 'top hat');
   });
 
-it.skip('', function() {
+it('should be able to have a different favorite accessory', function() {
     var magician = new Magician({ name: 'Casey', clothing: 'cape' });
 
     assert.equal(magician.favoriteAccessory, 'cape')
   });
 
-it.skip('', function() {
+it('should be able to perform an incantation', function() {
     var magician = new Magician({ name: 'Scott' });
 
     var spell = magician.performIncantation('abracadabra');
@@ -50,7 +50,7 @@ it.skip('', function() {
     assert.equal(charm, 'ALLAKAZAAM!');
   });
 
-it.skip('', function() {
+it('should be able to perform a trick', function() {
     var magician1 = new Magician({ name: 'Hannah' });
     var magician2 = new Magician({ name: 'Kayla', clothing: 'top hat' });
 
@@ -61,7 +61,7 @@ it.skip('', function() {
     assert.equal(spell2, 'PULL RABBIT FROM TOP HAT');
   });
 
-it.skip('', function() {
+it('should be able to perform a different trick based on favorite accessory', function() {
     var magician = new Magician({ name: 'Leta', clothing: 'cape' });
 
     var spell = magician.performTrick();
@@ -69,13 +69,13 @@ it.skip('', function() {
     assert.equal(spell, 'PULL DOVE FROM SLEEVE');
   });
 
-it.skip('', function() {
+it('should default to a confidence percentage of 10', function() {
     var magician = new Magician({ name: 'Leta' });
 
     assert.equal(magician.confidencePercentage, 10);
   });
 
-it.skip('', function() {
+it('should increase confidence percentage by 10 percent after performing each trick', function() {
     var magician = new Magician({ name: 'Leta' });
 
     magician.performTrick();
@@ -89,7 +89,7 @@ it.skip('', function() {
     assert.equal(magician.confidencePercentage, 50);
   });
 
-it.skip('', function() {
+it('should perform show stopper if confidence reaches 100', function() {
     var magician = new Magician({ name: 'Scott', assistant: true });
 
     assert.equal(magician.performShowStopper(), 'Oh no, this trick is not ready!');
@@ -101,7 +101,7 @@ it.skip('', function() {
     assert.equal(magician.performShowStopper(), 'WOW! The magician totally just sawed that person in half!');
   });
 
-it.skip('', function() {
+it('should only be able to perform a showstopper if the magician has an assistant', function() {
     var magician1 = new Magician({ name: 'Scott', assistant: false });
     var magician2 = new Magician({ name: 'Hannah', assistant: true });
 
