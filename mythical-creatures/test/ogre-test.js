@@ -5,22 +5,22 @@ const Human = require('../exercises/human');
 describe('Ogre', () => {
   // Oh no! It looks like there's no text in the `it` blocks! I guess you'll have to read the tests SUPER carefully to know what the test is expecting!
 
-  it.skip('', function() {
+  it('should have a name', function() {
     const ogre = new Ogre({name:'Brak'});
     assert.equal(ogre.name, 'Brak');
   });
 
-  it.skip('', function() {
+  it('should have a default home swamp', function() {
     const ogre = new Ogre({name: 'Brak'});
     assert.equal(ogre.home, 'Swamp');
   });
 
-  it.skip('', function() {
+  it('should be able to have a different home', function() {
     const ogre = new Ogre({name: 'Brak', abode: 'The Ritz'});
     assert.equal(ogre.home, 'The Ritz');
   });
 
-  it.skip('', function() {
+  it('should be able to encounter a human', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
@@ -31,7 +31,7 @@ describe('Ogre', () => {
     assert.equal(human.encounterCounter, 1);
   });
 
-  it.skip('', function() {
+  it('human should be able to notice ogre', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
@@ -43,7 +43,7 @@ describe('Ogre', () => {
     assert.equal(human.noticesOgre(), true);
   });
 
-  it.skip('', function() {
+  it('human should only be able to notice ogre at third encounter', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
@@ -62,7 +62,7 @@ describe('Ogre', () => {
     assert.equal(human.noticesOgre(), true);
   });
 
-  it.skip('', function() {
+  it('ogre should be able to swing at the human', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
@@ -72,7 +72,7 @@ describe('Ogre', () => {
     assert.equal(ogre.swings, 1);
   });
 
-  it.skip('', function() {
+  it('ogre should swing at human if human notices ogre', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 

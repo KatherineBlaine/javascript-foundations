@@ -3,14 +3,14 @@ const Fairy = require('../exercises/fairy');
 
 describe('Fairy', () => {
 
-  it.skip('should have a name and some fairy dust by default', () => {
+  it('should have a name and some fairy dust by default', () => {
     const fairy = new Fairy('Mab');
 
-    assert.equal(fairy.name, Mab);
+    assert.equal(fairy.name, 'Mab');
     assert.equal(fairy.dust, 10);
   });
 
-  it.skip('should get a small amount of fairy dust when others believe in her', () => {
+  it('should get a small amount of fairy dust when others believe in her', () => {
     const fairy = new Fairy('Sookie');
     const dustBefore = fairy.dust;
 
@@ -21,7 +21,7 @@ describe('Fairy', () => {
     assert.equal(difference, 1);
   });
 
-  it.skip('should get a lot of fairy dust from believeing in herself', () => {
+  it('should get a lot of fairy dust from believeing in herself', () => {
     const fairy = new Fairy('Tinkerbell');
     const dustBefore = fairy.dust;
 
@@ -32,7 +32,7 @@ describe('Fairy', () => {
     assert.equal(difference, 10);
   });
 
-  it.skip('should start with an Iris flower dress', () => {
+  it('should start with an Iris flower dress', () => {
     const fairy = new Fairy('Rose');
 
     assert.deepEqual(fairy.clothes, {dresses: ['Iris']});
@@ -46,7 +46,7 @@ describe('Fairy', () => {
     assert.deepEqual(fairy.clothes.dresses, ['Iris', 'Daffodil', 'Tulip', 'Poppy']);
   });
 
-  it.skip('should turn more flowers into even more dresses', () => {
+  it('should turn more flowers into even more dresses', () => {
     const fairy = new Fairy('Cosmo Pepperfeet');
 
     fairy.makeDresses(['Ranunculus', 'Daisy']);
