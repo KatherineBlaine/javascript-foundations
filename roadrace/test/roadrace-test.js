@@ -4,14 +4,14 @@ var assert = require('chai').assert;
 
 describe("Roadrace", function() {
 
-  it.skip('should have an name and location', function() {
+  it('should have a name and location', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
 
     assert.equal(race.name, 'Rock N Roll Half Marathon');
     assert.equal(race.location, "Las Vegas");
   })
 
-  it.skip('should be able to set the race distance in miles', function() {
+  it('should be able to set the race distance in miles', function() {
     var race1 = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var race2 = new Roadrace({title: 'City Park Marathon', city: "Denver"});
 
@@ -25,13 +25,13 @@ describe("Roadrace", function() {
     assert.equal(race2Distance, `The City Park Marathon in Denver is a 26.2 mile race.`);
   })
 
-  it.skip('should start with no participants', function() {
+  it('should start with no participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
 
     assert.deepEqual(race.participants, []);
   })
 
-  it.skip('should be able to register participants', function() {
+  it('should be able to register participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
@@ -46,7 +46,7 @@ describe("Roadrace", function() {
     assert.equal(race.participants[1].name, 'Pam');
   })
 
-  it.skip('should add race to each participant\'s completed races when race is completed', function() {
+  it('should add race to each participant\'s completed races when race is completed', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
@@ -65,7 +65,7 @@ describe("Roadrace", function() {
     assert.equal(lazyHeather.completedRaces.includes('Rock N Roll Half Marathon'), false);
   })
 
-  it.skip('should update each participant\'s miles and fitness when race is completed', function() {
+  it('should update each participant\'s miles and fitness when race is completed', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
